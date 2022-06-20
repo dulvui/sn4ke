@@ -12,8 +12,10 @@ Every donations means a lot to me and helps me to cover the Apple Developer fees
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P4BYZUR)
 
 **Table of contents**
+ - [Getting started](#getting-started)
  - [Contributions](#contributions)
- - [Licenses and Copyrights](#licenses-and-copyrights)
+ - [Licenses](#licenses)
+   - [Third party assets](#third-party-assets)
 
 # Getting started
 
