@@ -29,7 +29,7 @@ of the changes you made.
 
 # Licenses
 The game itself is licensed under the [GNU AGPL v3.0](LICENSE) license and all  
-assets are made by myself and licensed under the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
+assets made by myself and not mentioned in the [Third party assets](#third-party-assets) section, are licensed under the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
 
 
 ## Third party assets
