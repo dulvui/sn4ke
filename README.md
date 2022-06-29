@@ -7,7 +7,7 @@ This game is open source, with no ads and no tracking.
 
 
 If you like the game, consider supporting me on Ko-fi :-)  
-Every donations means a lot to me and helps me to cover the Apple Developer fees.
+Every donation means a lot to me and helps me to cover the Apple Developer fees.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P4BYZUR)
 
@@ -20,7 +20,7 @@ Every donations means a lot to me and helps me to cover the Apple Developer fees
 # Getting started
 
 Take a look at the official libGDX [documentation](https://libgdx.com/dev/) on how to get started with libGDX and how to setup the project.  
-Or just contact me at simon.dalvai@posteo.de and I'll help you to get started and update this README, so that other also can contribute. But until that doesn't happens, I'm too lazy to write a setup documentation.
+Or just contact me at simon.dalvai@posteo.de, I'll help you to get started and update this README, so that others can also contribute. But until that doesn't happen, I'm too lazy to write a setup documentation.
 
 # Contributions
 If you want to contribute to the project, please fork the repo,    
@@ -29,12 +29,12 @@ of the changes you made.
 
 # Licenses
 The game itself is licensed under the [GNU AGPL v3.0](LICENSE) license and all  
-assets made by myself are licensed under the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
+assets are made by myself and licensed under the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
 
 
 ## Third party assets
 
-The following assets a kindly made by [kenney.nl](https://www.kenney.nl/assets/digital-audio) under the [CC-0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) license.
+The following assets are kindly made by [kenney.nl](https://www.kenney.nl/assets/digital-audio) under the [CC-0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) license.
 
 `android/assets/sound/`
 
