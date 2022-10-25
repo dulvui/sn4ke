@@ -3,9 +3,8 @@ name: Export to iOS and release to Test Flight
 on:
   push:
     paths:
-      - "version-ios"
+      - "ios/robovm.properties"
       - ".github/workflows/release-ios.yml"
-      - "exportOptions.plist"
 
 env:
   PROJECT_NAME: Sn4ke
