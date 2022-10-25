@@ -9,7 +9,6 @@ on:
 env:
   PROJECT_NAME: Sn4ke
   # WORKING_DIRECTORY: game
-  EXPORT_PRESET_CFG: ${{ secrets.GODOT_EXPORTS_PRESET_CFG }}
   BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
   PROVISION_PROFILE_BASE64: ${{ secrets.PROVISION_PROFILE_BASE64 }}
   P12_PASSWORD: ${{ secrets.P12_PASSWORD }}
@@ -26,7 +25,7 @@ jobs:
         run: |
           # create variables
           CERTIFICATE_PATH=$RUNNER_TEMP/build_certificate.p12
-          PP_PATH=$RUNNER_TEMP/build_pp.mobileprovision
+          PP_PATH=$RUNNER_TEMP/comsimondalvaisn4ke.mobileprovision
           KEYCHAIN_PATH=$RUNNER_TEMP/app-signing.keychain-db
 
           # import certificate and provisioning profile from secrets
@@ -53,7 +52,5 @@ jobs:
         uses: dulvui/libgdx-ios-release@v0.1
         with:
           # working-directory: $WORKING_DIRECTORY
-          project-name: $PROJECT_NAME
-          provision-profile-path: ~/Library/MobileDevice/Provisioning\ Profiles/build_pp.mobileprovision
           apple-id-username: ${{ secrets.APPLE_ID_USERNAME }}
           apple-id-password: ${{ secrets.APPLE_ID_PASSWORD }}
