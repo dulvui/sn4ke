@@ -25,7 +25,7 @@ jobs:
         run: |
           # create variables
           CERTIFICATE_PATH=$RUNNER_TEMP/build_certificate.p12
-          PP_PATH=$RUNNER_TEMP/comsimondalvaisn4ke.mobileprovision
+          PP_PATH=$RUNNER_TEMP/build_pp.mobileprovision
           KEYCHAIN_PATH=$RUNNER_TEMP/app-signing.keychain-db
 
           # import certificate and provisioning profile from secrets
@@ -48,9 +48,29 @@ jobs:
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
 
-      - name: Export and release to Testflight
-        uses: dulvui/libgdx-ios-release@v0.1
-        with:
-          # working-directory: $WORKING_DIRECTORY
-          apple-id-username: ${{ secrets.APPLE_ID_USERNAME }}
-          apple-id-password: ${{ secrets.APPLE_ID_PASSWORD }}
+      # - name: Export and release to Testflight
+      #   uses: dulvui/libgdx-ios-release@v0.1
+      #   with:
+      #     apple-id-username: ${{ secrets.APPLE_ID_USERNAME }}
+      #     apple-id-password: ${{ secrets.APPLE_ID_PASSWORD }}
+
+
+    - name: Force XCode 13.4
+      run: sudo xcode-select -switch /Applications/Xcode_13.4.app
+
+    - name: Build the libGDX application
+      run: ./gradlew ios:createIPA
+ 
+    - name: Publish the App on TestFlight
+      if: success()
+      env:
+        APPLEID_USERNAME: ${{ inputs.apple-id-username }}
+        APPLEID_PASSWORD: ${{ inputs.apple-id-password }}
+      run: |
+        xcrun altool \
+          --upload-app \
+          -t ios \
+          -f *.ipa \
+          -u "${{ inputs.apple-id-username }}" \
+          -p "${{ inputs.apple-id-password }}" \
+          --verbose
