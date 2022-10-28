@@ -3,7 +3,7 @@ name: Export to iOS and release to Test Flight
 on:
   push:
     paths:
-      - "ios/robovm.properties"
+      - "ios/**"
       - ".github/workflows/release-ios.yml"
 
 env:
