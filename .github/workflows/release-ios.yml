@@ -55,22 +55,22 @@ jobs:
       #     apple-id-password: ${{ secrets.APPLE_ID_PASSWORD }}
 
 
-    - name: Force XCode 13.4
-      run: sudo xcode-select -switch /Applications/Xcode_13.4.app
+      - name: Force XCode 13.4
+        run: sudo xcode-select -switch /Applications/Xcode_13.4.app
 
-    - name: Build the libGDX application
-      run: ./gradlew ios:createIPA
- 
-    - name: Publish the App on TestFlight
-      if: success()
-      env:
-        APPLEID_USERNAME: ${{ inputs.apple-id-username }}
-        APPLEID_PASSWORD: ${{ inputs.apple-id-password }}
-      run: |
-        xcrun altool \
-          --upload-app \
-          -t ios \
-          -f *.ipa \
-          -u "${{ inputs.apple-id-username }}" \
-          -p "${{ inputs.apple-id-password }}" \
-          --verbose
+      - name: Build the libGDX application
+        run: ./gradlew ios:createIPA
+  
+      - name: Publish the App on TestFlight
+        if: success()
+        env:
+          APPLEID_USERNAME: ${{ inputs.apple-id-username }}
+          APPLEID_PASSWORD: ${{ inputs.apple-id-password }}
+        run: |
+          xcrun altool \
+            --upload-app \
+            -t ios \
+            -f *.ipa \
+            -u "${{ inputs.apple-id-username }}" \
+            -p "${{ inputs.apple-id-password }}" \
+            --verbose
