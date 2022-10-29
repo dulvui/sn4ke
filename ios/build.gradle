@@ -14,6 +14,7 @@ createIPA.dependsOn build
 
 robovm {
 	archs = "thumbv7:arm64"
+	iosProvisioningProfile = "f9f8e406-83bb-4f67-a836-4802b8b295f8"
 }
 
 eclipse.project.name = appName + "-ios"
