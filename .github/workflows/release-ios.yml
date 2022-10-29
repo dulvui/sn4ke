@@ -61,9 +61,6 @@ jobs:
       # - name: Rename Provisioning profile to $PP_UUID.mobileprovision
       #   run: mv ~/Library/MobileDevice/Provisioning\ Profiles/build_pp.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/$PP_UUID.mobileprovision
 
-      - name: Create Robovm ram disk
-        run: SIZE=2048 ; diskutil erasevolume HFS+ 'RoboVM RAM Disk' `hdiutil attach -nomount ram://$((SIZE * 2048))`
-
       - name: Build the libGDX application
         run: ./gradlew ios:createIPA
   
