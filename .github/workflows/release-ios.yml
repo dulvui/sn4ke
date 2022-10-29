@@ -65,7 +65,7 @@ jobs:
         run: ./gradlew ios:createIPA
 
       - name: List files
-        run: ls -la ios
+        run: ls -la ios/build/robovm
   
       - name: Publish the App on TestFlight
         if: success()
@@ -73,7 +73,7 @@ jobs:
           xcrun altool \
             --upload-app \
             -t ios \
-            -f iosexport/*.ipa \
+            -f ios/build/robovm/*.ipa \
             -u "${{ secrets.APPLE_ID_USERNAME }}" \
             -p "${{ secrets.APPLE_ID_PASSWORD }}" \
             --verbose
