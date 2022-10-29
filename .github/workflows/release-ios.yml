@@ -64,6 +64,9 @@ jobs:
       - name: Rename Provisioning profile to $PP_UUID.mobileprovision
         run: mv ~/Library/MobileDevice/Provisioning\ Profiles/build_pp.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/$PP_UUID.mobileprovision
 
+      - name: Debug
+        run: ls -la ~/Library/MobileDevice/Provisioning\ Profiles
+
       - name: Build the libGDX application
         run: ./gradlew ios:createIPA
   
