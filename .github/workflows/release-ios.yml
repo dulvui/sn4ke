@@ -63,17 +63,17 @@ jobs:
 
       - name: Build the libGDX application
         run: ./gradlew ios:createIPA
+
+      - name: List files
+        run: ls -la
   
       - name: Publish the App on TestFlight
         if: success()
-        env:
-          APPLEID_USERNAME: ${{ inputs.apple-id-username }}
-          APPLEID_PASSWORD: ${{ inputs.apple-id-password }}
         run: |
           xcrun altool \
             --upload-app \
             -t ios \
             -f iosexport/*.ipa \
-            -u "${{ inputs.apple-id-username }}" \
-            -p "${{ inputs.apple-id-password }}" \
+            -u "${{ secrets.APPLE_ID_USERNAME }}" \
+            -p "${{ secrets.APPLE_ID_PASSWORD }}" \
             --verbose
