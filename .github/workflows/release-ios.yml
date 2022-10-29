@@ -49,31 +49,8 @@ jobs:
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
 
-      # - name: Export and release to Testflight
-      #   uses: dulvui/libgdx-ios-release@v0.1
-      #   with:
-      #     apple-id-username: ${{ secrets.APPLE_ID_USERNAME }}
-      #     apple-id-password: ${{ secrets.APPLE_ID_PASSWORD }}
-
-      # - name: Extract Provisioning profile UUID and create PP_UUID env variable
-      #   run: echo "PP_UUID=$(grep -a -A 1 'UUID' ~/Library/MobileDevice/Provisioning\ Profiles/build_pp.mobileprovision | grep string | sed -e "s|<string>||" -e "s|</string>||" | tr -d '\t')" >> $GITHUB_ENV
-
-      # - name: Rename Provisioning profile to $PP_UUID.mobileprovision
-      #   run: mv ~/Library/MobileDevice/Provisioning\ Profiles/build_pp.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/$PP_UUID.mobileprovision
-
-      - name: Build the libGDX application
-        run: ./gradlew ios:createIPA
-
-      - name: List files
-        run: ls -la ios/build/robovm
-  
-      - name: Publish the App on TestFlight
-        if: success()
-        run: |
-          xcrun altool \
-            --upload-app \
-            -t ios \
-            -f ios/build/robovm/*.ipa \
-            -u "${{ secrets.APPLE_ID_USERNAME }}" \
-            -p "${{ secrets.APPLE_ID_PASSWORD }}" \
-            --verbose
+      - name: Export and release to Testflight
+        uses: dulvui/libgdx-ios-release@v1.0
+        with:
+          apple-id-username: ${{ secrets.APPLE_ID_USERNAME }}
+          apple-id-password: ${{ secrets.APPLE_ID_PASSWORD }}
