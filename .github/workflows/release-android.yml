@@ -9,9 +9,9 @@ on:
       - ".github/workflows/release-android.yml"
 
 env:
-  RELEASE_KEY_STORE_BASE64: ${{ secrets.RELEASE_KEY_STORE_BASE64 }}
   SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
   KEYSTORE_PROPERTIES: ${{ secrets.KEYSTORE_PROPERTIES }}
+  RELEASE_KEY_STORE_BASE64: ${{ secrets.ANDROID_KEYSTORE }}
 
 jobs:
   deploy:
