@@ -20,7 +20,7 @@ android {
         applicationId "com.salvai.snake"
         minSdkVersion 14
         targetSdkVersion 32
-        versionCode 58
+        versionCode 59
         versionName "8"
     }
     buildTypes {
