@@ -30,7 +30,7 @@ android {
         versionName "8"
     }
     signingConfigs {
-        config {
+        release {
             keyAlias keystoreProperties['keyAlias']
             keyPassword keystoreProperties['keyPassword']
             storePassword keystoreProperties['storePassword']
