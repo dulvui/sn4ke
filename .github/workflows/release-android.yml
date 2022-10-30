@@ -22,6 +22,9 @@ jobs:
       - name: Create service-account.json
         run: echo $SERVICE_ACCOUNT_JSON > service-account.json
 
+      - name: Create keystore.properties
+        run: echo $KEYSTORE_PROPERTIES > keystore.properties
+
       - name: Create release keystore
         run: echo $RELEASE_KEY_STORE_BASE64 | base64 --decode > keystore.keystore
 
