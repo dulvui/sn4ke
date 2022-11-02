@@ -11,6 +11,8 @@ on:
 env:
   SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
   KEYSTORE_PROPERTIES: ${{ secrets.KEYSTORE_PROPERTIES }}
+  KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+  KEYSTORE_ALIAS: ${{ secrets.KEYSTORE_ALIAS }}
   RELEASE_KEY_STORE_BASE64: ${{ secrets.ANDROID_KEYSTORE }}
 
 jobs:
@@ -30,6 +32,8 @@ jobs:
         run: echo $RELEASE_KEY_STORE_BASE64 | base64 --decode > android/keystore.keystore
 
       - name: Export signed apk and release to internal testing
-        uses: dulvui/libgdx-android-release@v0.1
+        uses: dulvui/libgdx-android-release@v0.2
         with:
           package-name: com.salvai.snake
+          keystore-alias: $KEYSTORE_ALIAS
+          keystore-password: $KEYSTORE_PASSWORD
