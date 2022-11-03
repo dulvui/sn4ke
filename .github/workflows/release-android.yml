@@ -32,7 +32,7 @@ jobs:
       - name: Insert keystore properties
         run: |
           sed -i -e "s%STORE_PASSWORD%${{env.STORE_PASSWORD}}%g" android/build.gradle
-          sed -i -e "s%KEYSTORE_PASSWORD%${{env.KEYSTORE_PASSWORD}}%g" android/build.gradle
+          sed -i -e "s%KEYS_PASSWORD%${{env.KEYSTORE_PASSWORD}}%g" android/build.gradle
           sed -i -e "s%KEYSTORE_ALIAS%${{env.KEYSTORE_ALIAS}}%g" android/build.gradle
 
 
