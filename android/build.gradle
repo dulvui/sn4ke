@@ -31,9 +31,9 @@ android {
     signingConfigs {
         release {
             storeFile file('keystore.keystore')
-            storePassword "STORE_PASSWORD"
-            keyAlias "KEYSTORE_ALIAS"
-            keyPassword "KEYSTORE_PASSWORD"
+            storePassword STORE_PASSWORD
+            keyAlias KEYSTORE_ALIAS
+            keyPassword KEYSTORE_PASSWORD
             // storePassword keystoreProperties['storePassword']
             // keyAlias keystoreProperties['keyAlias']
             // keyPassword keystoreProperties['keyPassword']
