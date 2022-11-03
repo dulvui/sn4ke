@@ -62,8 +62,6 @@ jobs:
       - name: Publish to Play Store
         uses: r0adkll/upload-google-play@v1
         with:
-          serviceAccountJson: ${{ inputs.service-account-json }}
-          packageName: ${{ inputs.package-name }}
+          packageName: com.salvai.snake
           releaseFiles: android/build/outputs/apk/signed-aligned.apk
-          track: ${{ inputs.release-track }}
           status: completed
