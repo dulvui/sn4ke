@@ -38,7 +38,7 @@ jobs:
 
 
       - name: Create release keystore
-        run: echo -n "$RELEASE_KEY_STORE_BASE64" | base64 --decode --output android/keystore.keystore
+        run: echo -n "$RELEASE_KEY_STORE_BASE64" | base64 --decode android/keystore.keystore
 
       # - name: Export signed apk and release to internal testing
       #   uses: dulvui/libgdx-android-release@v0.2
