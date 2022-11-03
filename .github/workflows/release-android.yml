@@ -10,7 +10,8 @@ on:
 
 env:
   SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
-  KEYSTORE_PROPERTIES: ${{ secrets.KEYSTORE_PROPERTIES }}
+  # KEYSTORE_PROPERTIES: ${{ secrets.KEYSTORE_PROPERTIES }}
+  KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
   KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
   KEYSTORE_ALIAS: ${{ secrets.KEYSTORE_ALIAS }}
   RELEASE_KEY_STORE_BASE64: ${{ secrets.ANDROID_KEYSTORE }}
@@ -25,8 +26,16 @@ jobs:
       - name: Create service-account.json
         run: echo -n $SERVICE_ACCOUNT_JSON > service-account.json
 
-      - name: Create keystore.properties
-        run: echo -n $KEYSTORE_PROPERTIES > keystore.properties
+      # - name: Create keystore.properties
+      #   run: echo -n $KEYSTORE_PROPERTIES > keystore.properties
+
+      - name: Insert keystore properties
+        run: |
+          sed -i -e "s%STORE_PASSWORD%${{env.STORE_PASSWORD}}%g" android/build.gradle
+          sed -i -e "s%KEYSTORE_PASSWORD%${{env.KEYSTORE_PASSWORD}}%g" android/build.gradle
+          sed -i -e "s%KEYSTORE_ALIAS%${{env.KEYSTORE_ALIAS}}%g" android/build.gradle
+
+
 
       - name: Create release keystore
         run: echo -n $RELEASE_KEY_STORE_BASE64 | base64 --decode > android/keystore.keystore

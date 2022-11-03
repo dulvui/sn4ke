@@ -1,7 +1,7 @@
 // from https://developer.android.com/studio/publish/app-signing#secure-shared-keystore
-def keystorePropertiesFile = rootProject.file("keystore.properties")
-def keystoreProperties = new Properties()
-keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+// def keystorePropertiesFile = rootProject.file("keystore.properties")
+// def keystoreProperties = new Properties()
+// keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
     buildToolsVersion "29.0.3"
@@ -30,10 +30,13 @@ android {
     }
     signingConfigs {
         release {
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
-            storePassword keystoreProperties['storePassword']
             storeFile file('keystore.keystore')
+            storePassword "STORE_PASSWORD"
+            keyAlias "KEYSTORE_ALIAS"
+            keyPassword "KEYSTORE_PASSWORD"
+            // storePassword keystoreProperties['storePassword']
+            // keyAlias keystoreProperties['keyAlias']
+            // keyPassword keystoreProperties['keyPassword']
         }
     }
     buildTypes {
