@@ -52,5 +52,5 @@ jobs:
         with:
           serviceAccountJson: service-account.json
           packageName: com.salvai.snake
-          releaseFiles: android/build/outputs/apk/*.apk
+          releaseFiles: android/build/outputs/apk/release/*.apk
           status: completed
