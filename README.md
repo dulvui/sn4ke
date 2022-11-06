@@ -1,20 +1,17 @@
 # Sn4ke
+[![Release iOS](https://github.com/dulvui/sn4ke/actions/workflows/release-ios.yml/badge.svg)](https://github.com/dulvui/sn4ke/actions/workflows/release-ios.yml)
+[![Release Android](https://github.com/dulvui/sn4ke/actions/workflows/release-android.yml/badge.svg)](https://github.com/dulvui/sn4ke/actions/workflows/release-android.yml)
+
 Snake game made with libGDX with 60 levels.  
 This game is open source, with no ads and no tracking.
 
-[![Release iOS](https://github.com/dulvui/sn4ke/actions/workflows/release-ios.yml/badge.svg)](https://github.com/dulvui/sn4ke/actions/workflows/release-ios.yml)
-[![Release Android](https://github.com/dulvui/sn4ke/actions/workflows/release-android.yml/badge.svg)](https://github.com/dulvui/sn4ke/actions/workflows/release-android.yml)
 
 <a href="https://play.google.com/store/apps/details?id=com.salvai.snake" target="_blank"><img src="store-images/PlayStore.svg" alt="Get it on Google Play" height="49"></a>
 <a href="https://apps.apple.com/app/sn4ke/id1626543157" target="_blank"><img src="store-images/AppStore.svg" alt="Download on the App Store" height="50" ></a>
 
-If you like the game, consider supporting me on Ko-fi :-)  
-Every donation means a lot to me and helps me to cover the Apple Developer fees.
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P4BYZUR)
-
-**Table of contents**
+## Table of contents
 - [Sn4ke](#sn4ke)
+  - [Table of contents](#table-of-contents)
   - [Screenshots](#screenshots)
 - [Getting started](#getting-started)
 - [Contributions](#contributions)
