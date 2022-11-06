@@ -15,10 +15,19 @@ Every donation means a lot to me and helps me to cover the Apple Developer fees.
 
 **Table of contents**
 - [Sn4ke](#sn4ke)
+  - [Screenshots](#screenshots)
 - [Getting started](#getting-started)
 - [Contributions](#contributions)
 - [Licenses](#licenses)
   - [Third party assets](#third-party-assets)
+
+## Screenshots
+<div>
+  <img src="screenshots/screenshot-1.png" alt="Level 1" width="200"/>
+  <img src="screenshots/screenshot-2.png" alt="Level 2" width="200"/>
+  <img src="screenshots/screenshot-3.png" alt="Level 3" width="200"/>
+  <img src="screenshots/screenshot-4.png" alt="Level 4" width="200"/>
+</div>
 
 # Getting started
 
