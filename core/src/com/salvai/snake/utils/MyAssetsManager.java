@@ -30,8 +30,6 @@ public class MyAssetsManager {
         manager.load(Constants.DOWN_SFX, Sound.class);
         manager.load(Constants.GAME_OVER_SFX, Sound.class);
         manager.load(Constants.NEW_BEST_SFX, Sound.class);
-        manager.load(Constants.CAMERA_SFX, Sound.class);
-
     }
 
     public void loadSplashScreen() {

@@ -62,7 +62,6 @@ public class Constants {
     public static final String DOWN_SFX = "sound/down.m4a";
     public static final String GAME_OVER_SFX = "sound/game-over.m4a";
     public static final String NEW_BEST_SFX = "sound/new-best.m4a";
-    public static final String CAMERA_SFX = "sound/camera.wav";
     //background
     public static final int MAX_BACKGROUND_OBJECTS = 60;
     public static final int MIN_BACKGROUND_SPEED = 20;

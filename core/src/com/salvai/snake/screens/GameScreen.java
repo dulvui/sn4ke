@@ -54,7 +54,6 @@ public class GameScreen extends ScreenAdapter {
     public Sound leftRightSound;
     public Sound gameOverSound;
     public Sound newBestSound;
-    private Sound cameraSound;
     private int updateCountdown;
     private int gameOverEffectCount;
     private GameFlowManager gameFlowManager;
@@ -197,7 +196,6 @@ public class GameScreen extends ScreenAdapter {
         leftRightSound = game.assetsManager.manager.get(Constants.LEFT_RIGHT_SFX, Sound.class);
         gameOverSound = game.assetsManager.manager.get(Constants.GAME_OVER_SFX, Sound.class);
         newBestSound = game.assetsManager.manager.get(Constants.NEW_BEST_SFX, Sound.class);
-        cameraSound = game.assetsManager.manager.get(Constants.CAMERA_SFX, Sound.class);
     }
 
 
