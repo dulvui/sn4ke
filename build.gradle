@@ -6,14 +6,11 @@ buildscript {
         mavenCentral()
         gradlePluginPortal()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-        jcenter()
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath 'com.android.tools.build:gradle:7.3.1'
         classpath 'com.mobidevelop.robovm:robovm-gradle-plugin:2.3.16'
-
-
     }
 }
 
@@ -35,7 +32,6 @@ allprojects {
         mavenLocal()
         mavenCentral()
         google()
-        jcenter()
         gradlePluginPortal()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }

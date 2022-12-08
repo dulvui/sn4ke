@@ -4,7 +4,6 @@
 // keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
-    buildToolsVersion "29.0.3"
     compileSdkVersion 32
     sourceSets {
         main {
