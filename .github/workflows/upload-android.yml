@@ -1,12 +1,12 @@
-name: Release Android
+name: Android upload
 
-# only when version file changes, the action runs
-# tag triggering doesn't support caching
 on:
   push:
+    branches:    
+      - 'prod'
     paths:
       - "android/**"
-      - ".github/workflows/release-android.yml"
+      - ".github/workflows/upload-android.yml"
 
 env:
   SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
@@ -35,6 +35,6 @@ jobs:
         run: echo -n "$RELEASE_KEY_STORE_BASE64" | base64 --decode > android/keystore.keystore
 
       - name: Export signed apk and release to internal testing
-        uses: dulvui/libgdx-android-release@v1.0
+        uses: dulvui/libgdx-android-upload@v1.0
         with:
           package-name: com.salvai.snake

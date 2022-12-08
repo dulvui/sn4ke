@@ -1,6 +1,6 @@
 # Sn4ke
-[![Release iOS](https://github.com/dulvui/sn4ke/actions/workflows/release-ios.yml/badge.svg)](https://github.com/dulvui/sn4ke/actions/workflows/release-ios.yml)
-[![Release Android](https://github.com/dulvui/sn4ke/actions/workflows/release-android.yml/badge.svg)](https://github.com/dulvui/sn4ke/actions/workflows/release-android.yml)
+[![iOS upload](https://github.com/dulvui/sn4ke/actions/workflows/upload-ios.yml/badge.svg)](https://github.com/dulvui/sn4ke/actions/workflows/upload-ios.yml)
+[![Android upload](https://github.com/dulvui/sn4ke/actions/workflows/upload-android.yml/badge.svg)](https://github.com/dulvui/sn4ke/actions/workflows/upload-android.yml)
 
 Snake game made with libGDX with 60 levels.  
 This game is open source, with no ads and no tracking.

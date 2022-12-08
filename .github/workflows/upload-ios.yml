@@ -1,10 +1,12 @@
-name: Release iOS
+name: iOS upload
 
 on:
   push:
+    branches:    
+      - 'prod'
     paths:
       - "ios/**"
-      - ".github/workflows/release-ios.yml"
+      - ".github/workflows/upload-ios.yml"
 
 env:
   PROJECT_NAME: Sn4ke
@@ -49,7 +51,7 @@ jobs:
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
 
       - name: Export and release to Testflight
-        uses: dulvui/libgdx-ios-release@v1.1
+        uses: dulvui/libgdx-ios-upload@v1.1
         with:
           apple-id-username: ${{ secrets.APPLE_ID_USERNAME }}
           apple-id-password: ${{ secrets.APPLE_ID_PASSWORD }}
