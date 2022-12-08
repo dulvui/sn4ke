@@ -27,8 +27,8 @@ android {
         applicationId "com.salvai.snake"
         minSdkVersion 14
         targetSdkVersion 32
-        versionCode 63
-        versionName "8"
+        versionCode 64
+        versionName "8.1"
     }
     signingConfigs {
         release {
