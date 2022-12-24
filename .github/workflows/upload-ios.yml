@@ -9,7 +9,6 @@ on:
       - ".github/workflows/upload-ios.yml"
 
 env:
-  PROJECT_NAME: Sn4ke
   BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
   PROVISION_PROFILE_BASE64: ${{ secrets.PROVISION_PROFILE_BASE64 }}
   P12_PASSWORD: ${{ secrets.P12_PASSWORD }}
