@@ -22,10 +22,6 @@ allprojects {
         appName = "Sn4ke"
         gdxVersion = '1.11.0'
         roboVMVersion = '2.3.16'
-        box2DLightsVersion = '1.5'
-        ashleyVersion = '1.7.4'
-        aiVersion = '1.8.2'
-        gdxControllersVersion = '2.2.1'
     }
 
     repositories {
