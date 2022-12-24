@@ -5,10 +5,11 @@ on:
     branches:    
       - 'prod'
     paths:
-      - "android/**"
+      - "src/android/**"
       - ".github/workflows/upload-android.yml"
 
 env:
+  WORKING_DIRECTORY: src
   SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
   KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
   STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
@@ -26,15 +27,18 @@ jobs:
         run: echo -n "$SERVICE_ACCOUNT_JSON" > service-account.json
 
       - name: Insert keystore properties
+        working-directory: ${{ env.WORKING_DIRECTORY }}
         run: |
           sed -i -e "s%STORE_PASSWORD%${{env.STORE_PASSWORD}}%g" android/build.gradle
           sed -i -e "s%KEY_PASSWORD%${{env.KEYSTORE_PASSWORD}}%g" android/build.gradle
           sed -i -e "s%KEYSTORE_ALIAS%${{env.KEYSTORE_ALIAS}}%g" android/build.gradle
 
       - name: Create release keystore
+        working-directory: ${{ env.WORKING_DIRECTORY }}
         run: echo -n "$RELEASE_KEY_STORE_BASE64" | base64 --decode > android/keystore.keystore
 
       - name: Export signed apk and release to internal testing
-        uses: dulvui/libgdx-android-upload@v1.1
+        uses: dulvui/libgdx-android-upload@v1.2
         with:
           package-name: com.salvai.snake
+          working-directory: ${{ env.WORKING_DIRECTORY }}

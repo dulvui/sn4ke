@@ -6,44 +6,44 @@
 hs_err_pid*
 
 ## Robovm
-/ios/robovm-build/
-/iosexport/
+src/ios/robovm-build/
+src/iosexport/
 
 ## GWT
-/html/war/
-/html/gwt-unitCache/
-.apt_generated/
-.gwt/
-gwt-unitCache/
-www-test/
-.gwt-tmp/
+src/html/war/
+src/html/gwt-unitCache/
+src/.apt_generated/
+src/.gwt/
+src/gwt-unitCache/
+src/www-test/
+src/.gwt-tmp/
 
 ## Android Studio and Intellij and Android in general
-/android/libs/armeabi/
-/android/libs/armeabi-v7a/
-/android/libs/arm64-v8a/
-/android/libs/x86/
-/android/libs/x86_64/
-/android/gen/
+src/android/libs/armeabi/
+src/android/libs/armeabi-v7a/
+src/android/libs/arm64-v8a/
+src/android/libs/x86/
+src/android/libs/x86_64/
+src/android/gen/
 .idea/
 *.ipr
 *.iws
 *.iml
-/android/out/
+src/android/out/
 com_crashlytics_export_strings.xml
-/android/libs
+src/android/libs
 
 ## Eclipse
 
 .classpath
 .project
 .metadata/
-/android/bin/
-/core/bin/
-/desktop/bin/
-/html/bin/
-/ios/bin/
-/ios-moe/bin/
+src/android/bin/
+src/core/bin/
+src/desktop/bin/
+src/html/bin/
+src/ios/bin/
+src/ios-moe/bin/
 *.tmp
 *.bak
 *.swp
@@ -56,72 +56,74 @@ com_crashlytics_export_strings.xml
 ## NetBeans
 
 /nbproject/private/
-/android/nbproject/private/
-/core/nbproject/private/
-/desktop/nbproject/private/
-/html/nbproject/private/
-/ios/nbproject/private/
-/ios-moe/nbproject/private/
+src/android/nbproject/private/
+src/core/nbproject/private/
+src/desktop/nbproject/private/
+src/html/nbproject/private/
+src/ios/nbproject/private/
+src/ios-moe/nbproject/private/
 
-/build/
-/android/build/
-/core/build/
-/desktop/build/
-/html/build/
-/ios/build/
-/ios-moe/build/
+src/build/
+src/android/build/
+src/core/build/
+src/desktop/build/
+src/html/build/
+src/ios/build/
+src/ios-moe/build/
 
 /nbbuild/
-/android/nbbuild/
-/core/nbbuild/
-/desktop/nbbuild/
-/html/nbbuild/
-/ios/nbbuild/
-/ios-moe/nbbuild/
+src/android/nbbuild/
+src/core/nbbuild/
+src/desktop/nbbuild/
+src/html/nbbuild/
+src/ios/nbbuild/
+src/ios-moe/nbbuild/
 
-/dist/
-/android/dist/
-/core/dist/
-/desktop/dist/
-/html/dist/
-/ios/dist/
-/ios-moe/dist/
+src/dist/
+src/android/dist/
+src/core/dist/
+src/desktop/dist/
+src/html/dist/
+src/ios/dist/
+src/ios-moe/dist/
 
-/nbdist/
-/android/nbdist/
-/core/nbdist/
-/desktop/nbdist/
-/html/nbdist/
-/ios/nbdist/
-/ios-moe/nbdist/
+src/nbdist/
+src/android/nbdist/
+src/core/nbdist/
+src/desktop/nbdist/
+src/html/nbdist/
+src/ios/nbdist/
+src/ios-moe/nbdist/
 
 nbactions.xml
 nb-configuration.xml
 
 ## Gradle
 
-/local.properties
+src/local.properties
 .gradle/
 gradle-app.setting
-/build/
-/android/build/
-/core/build/
-/desktop/build/
-/html/build/
-/ios/build/
-/ios-moe/build/
+src/build/
+src/android/build/
+src/core/build/
+src/desktop/build/
+src/html/build/
+src/ios/build/
+src/ios-moe/build/
 
 ## OS Specific
 .DS_Store
 Thumbs.db
 
 ## iOS
-/ios/xcode/*.xcodeproj/*
-!/ios/xcode/*.xcodeproj/xcshareddata
-!/ios/xcode/*.xcodeproj/project.pbxproj
-/ios/xcode/native/
+src/ios/xcode/*.xcodeproj/*
+!src/ios/xcode/*.xcodeproj/xcshareddata
+!src/ios/xcode/*.xcodeproj/project.pbxproj
+src/ios/xcode/native/
 
-/ios-moe/xcode/*.xcodeproj/*
-!/ios-moe/xcode/*.xcodeproj/xcshareddata
-!/ios-moe/xcode/*.xcodeproj/project.pbxproj
-/ios-moe/xcode/native/
+src/ios-moe/xcode/*.xcodeproj/*
+!src/ios-moe/xcode/*.xcodeproj/xcshareddata
+!src/ios-moe/xcode/*.xcodeproj/project.pbxproj
+src/ios-moe/xcode/native/
+
+src/palettegenerator/node_modules
