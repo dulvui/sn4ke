@@ -5,7 +5,7 @@ on:
     branches:    
       - 'prod'
     paths:
-      - "ios/**"
+      - "src/ios/**"
       - ".github/workflows/upload-ios.yml"
 
 env:
