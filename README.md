@@ -41,6 +41,7 @@ To run it on your attached device run
 To make a debug aab build run
 ```
 ./gradlew assembleDebug
+```
 
 # Contributions
 If you want to contribute to the project, please fork the repo,    
