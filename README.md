@@ -14,6 +14,7 @@ This game is open source, with no ads and no tracking.
   - [Table of contents](#table-of-contents)
   - [Screenshots](#screenshots)
 - [Getting started](#getting-started)
+  - [Run it on your device](#run-it-on-your-device)
 - [Contributions](#contributions)
 - [Licenses](#licenses)
   - [Third party assets](#third-party-assets)
@@ -31,6 +32,16 @@ This game is open source, with no ads and no tracking.
 Take a look at the official libGDX [documentation](https://libgdx.com/dev/) on how to get started with libGDX and how to setup the project.  
 Or just contact me at simon.dalvai@posteo.de, I'll help you to get started and update this README, so that others can also contribute. But until that doesn't happen, I'm too lazy to write a setup documentation.
 
+## Run it on your device
+You can install and make release and debug releases with the gradlew wrapper located in `src/gradlew`.  
+To run it on your attached device run
+```
+./gradlew installDebug
+```
+To make a debug aab build run
+```
+./gradlew assembleDebug
+
 # Contributions
 If you want to contribute to the project, please fork the repo,    
 make your changes and make a pull request with a short description  
@@ -39,7 +50,6 @@ of the changes you made.
 # Licenses
 The game itself is licensed under the [GNU AGPL v3.0](LICENSE) license and all  
 assets made by myself and not mentioned in the [Third party assets](#third-party-assets) section, are licensed under the [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
-
 
 ## Third party assets
 
