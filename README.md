@@ -30,7 +30,7 @@ This game is open source, with no ads and no tracking.
 # Getting started
 
 Take a look at the official libGDX [documentation](https://libgdx.com/dev/) on how to get started with libGDX and how to setup the project.  
-Or just contact me at simon.dalvai@posteo.de, I'll help you to get started and update this README, so that others can also contribute. But until that doesn't happen, I'm too lazy to write a setup documentation.
+Or just contact me at info@simondalvai.com, I'll help you to get started and update this README, so that others can also contribute. But until that doesn't happen, I'm too lazy to write a setup documentation.
 
 ## Run it on your device
 You can install and make release and debug releases with the gradlew wrapper located in `src/gradlew`.  
