@@ -9,23 +9,22 @@ This game is open source, with no ads and no tracking.
 <a href="https://play.google.com/store/apps/details?id=com.salvai.snake" target="_blank"><img src="store-images/PlayStore.svg" alt="Get it on Google Play" height="49"></a>
 <a href="https://apps.apple.com/app/sn4ke/id1626543157" target="_blank"><img src="store-images/AppStore.svg" alt="Download on the App Store" height="50" ></a>
 
-## Table of contents
-- [Sn4ke](#sn4ke)
-  - [Table of contents](#table-of-contents)
-  - [Screenshots](#screenshots)
-- [Getting started](#getting-started)
-  - [Run it on your device](#run-it-on-your-device)
-- [Contributions](#contributions)
-- [Licenses](#licenses)
-  - [Third party assets](#third-party-assets)
-
-## Screenshots
 <div>
   <img src="screenshots/screenshot-1.png" alt="Level 1" width="200"/>
   <img src="screenshots/screenshot-2.png" alt="Level 2" width="200"/>
   <img src="screenshots/screenshot-3.png" alt="Level 3" width="200"/>
   <img src="screenshots/screenshot-4.png" alt="Level 4" width="200"/>
 </div>
+
+## Table of contents
+- [Sn4ke](#sn4ke)
+  - [Table of contents](#table-of-contents)
+- [Getting started](#getting-started)
+  - [Run it on your device](#run-it-on-your-device)
+- [Contributions](#contributions)
+- [Licenses](#licenses)
+  - [Third party assets](#third-party-assets)
+
 
 # Getting started
 
