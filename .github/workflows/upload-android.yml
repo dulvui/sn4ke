@@ -11,9 +11,9 @@ on:
 env:
   WORKING_DIRECTORY: src
   SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
-  KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-  STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
-  KEYSTORE_ALIAS: ${{ secrets.KEYSTORE_ALIAS }}
+  ANDROID_KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+  ANDROID_STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
+  ANDROID_KEYSTORE_ALIAS: ${{ secrets.KEYSTORE_ALIAS }}
   RELEASE_KEY_STORE_BASE64: ${{ secrets.ANDROID_KEYSTORE }}
 
 jobs:
@@ -56,9 +56,9 @@ jobs:
       - name: Insert keystore properties
         working-directory: ${{ env.WORKING_DIRECTORY }}
         run: |
-          sed -i -e "s%STORE_PASSWORD%${{env.STORE_PASSWORD}}%g" android/build.gradle
-          sed -i -e "s%KEY_PASSWORD%${{env.KEYSTORE_PASSWORD}}%g" android/build.gradle
-          sed -i -e "s%KEYSTORE_ALIAS%${{env.KEYSTORE_ALIAS}}%g" android/build.gradle
+          sed -i -e "s%STORE_PASSWORD%${{env.ANDROID_STORE_PASSWORD}}%g" android/build.gradle
+          sed -i -e "s%KEY_PASSWORD%${{env.ANDROID_KEYSTORE_PASSWORD}}%g" android/build.gradle
+          sed -i -e "s%KEYSTORE_ALIAS%${{env.ANDROID_KEYSTORE_ALIAS}}%g" android/build.gradle
 
       - name: Create release keystore
         working-directory: ${{ env.WORKING_DIRECTORY }}
