@@ -90,15 +90,12 @@ jobs:
       #     changesNotSentForReview: false
       #     status: completed
 
-      - name: find aab
-        run: ls -la src/android/build/outputs/bundle/release/
-
       # GITHUB RELEASES
       - name: Bundle aab to apk
         run: |
           wget -q https://github.com/google/bundletool/releases/download/1.14.0/bundletool-all-1.14.0.jar
-          java -jar bundletool-all-1.14.0.jar build-apks --bundle=src/android/build/outputs/bundle/release/*.aab --output=Sn4ke.apks \
-          --ks=keystore.keystore --ks-pass=pass:${{ secrets.ANDROID_STORE_PASSWORD }} --ks-key-alias=${{ secrets.ANDROID_KEYSTORE_ALIAS }} \
+          java -jar bundletool-all-1.14.0.jar build-apks --bundle=src/android/build/outputs/bundle/release/android-release.aab --output=Sn4ke.apks \
+          --ks=android/keystore.keystore --ks-pass=pass:${{ secrets.ANDROID_STORE_PASSWORD }} --ks-key-alias=${{ secrets.ANDROID_KEYSTORE_ALIAS }} \
           --key-pass=pass:${{ secrets.ANDROID_KEYSTORE_PASSWORD }} --mode=universal
           unzip -p Sn4ke.apks universal.apk > Sn4ke.apk
 
