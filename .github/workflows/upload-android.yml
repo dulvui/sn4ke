@@ -79,16 +79,16 @@ jobs:
         run: ./gradlew android:bundleRelease
 
       # GOOGLE PLAY STORE
-      # - name: Publish to Play Store
-      #   uses: r0adkll/upload-google-play@v1.0.18
-      #   with:
-      #     serviceAccountJson: service-account.json
-      #     packageName: com.salvai.snake
-      #     releaseFiles:  src/android/build/outputs/bundle/release/*.aab
-      #     whatsNewDirectory: distribution/whatsnew
-      #     track: 'internal'
-      #     changesNotSentForReview: false
-      #     status: completed
+      - name: Publish to Play Store
+        uses: r0adkll/upload-google-play@v1.0.18
+        with:
+          serviceAccountJson: service-account.json
+          packageName: com.salvai.snake
+          releaseFiles:  src/android/build/outputs/bundle/release/*.aab
+          whatsNewDirectory: distribution/whatsnew
+          track: 'internal'
+          changesNotSentForReview: false
+          status: completed
 
       # GITHUB RELEASES
       - name: Bundle aab to apk
