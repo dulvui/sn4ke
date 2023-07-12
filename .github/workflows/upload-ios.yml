@@ -60,7 +60,6 @@ jobs:
           PP_UUID=$(grep -a -A 1 'UUID' ~/Library/MobileDevice/Provisioning\ Profiles/build_pp.mobileprovision | grep string | sed -e "s|<string>||" -e "s|</string>||" | tr -d '\t')
           sed -i "s/PROVISION_PROFILE_UUID/$PP_UUID/g" src/ios/build.gradle
 
-      - name: 
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
