@@ -59,17 +59,11 @@ jobs:
         working-directory: ${{ env.WORKING_DIRECTORY }}
         run: echo -n "$RELEASE_KEY_STORE_BASE64" | base64 --decode > android/keystore.keystore
 
-      # - name: Export signed apk and release to internal testing
-      #   uses: dulvui/libgdx-android-upload@v1.2
-      #   with:
-      #     package-name: com.salvai.snake
-      #     working-directory: ${{ env.WORKING_DIRECTORY }}
-
-      - name: Set up JDK 1.8
+      - name: Set up JDK
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          java-version: 11
+          java-version: 17
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
