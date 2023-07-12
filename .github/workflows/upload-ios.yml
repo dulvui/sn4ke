@@ -52,30 +52,27 @@ jobs:
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
 
-    - name: Create robovm ram disk to speed up build
-      run: SIZE=2048 ; diskutil erasevolume HFS+ 'RoboVM RAM Disk' `hdiutil attach -nomount ram://$((SIZE * 2048))`
+      - name: Create robovm ram disk to speed up build
+        run: SIZE=2048 ; diskutil erasevolume HFS+ 'RoboVM RAM Disk' `hdiutil attach -nomount ram://$((SIZE * 2048))`
 
-    - name: Set up JDK
-      uses: actions/setup-java@v3
-      with:
-        distribution: 'temurin'
-        java-version: 17
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 17
 
-    - name: Build the libGDX application
-      working-directory: ${{ inputs.working-directory }}
-      run: ./gradlew ios:createIPA
- 
-    - name: Publish the App on TestFlight
-      working-directory: src
-      if: success()
-      env:
-        APPLEID_USERNAME: ${{ inputs.apple-id-username }}
-        APPLEID_PASSWORD: ${{ inputs.apple-id-password }}
-      run: |
-        xcrun altool \
-          --upload-app \
-          -t ios \
-          -f ios/build/robovm/*.ipa \
-          -u ${{ secrets.APPLE_ID_USERNAME }} \
-          -p ${{ secrets.APPLE_ID_PASSWORD }}\
-          --verbose
+      - name: Build the libGDX application
+        working-directory: ${{ inputs.working-directory }}
+        run: ./gradlew ios:createIPA
+  
+      - name: Publish the App on TestFlight
+        working-directory: src
+        if: success()
+        run: |
+          xcrun altool \
+            --upload-app \
+            -t ios \
+            -f ios/build/robovm/*.ipa \
+            -u ${{ secrets.APPLE_ID_USERNAME }} \
+            -p ${{ secrets.APPLE_ID_PASSWORD }} \
+            --verbose
