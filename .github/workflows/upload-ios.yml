@@ -62,7 +62,7 @@ jobs:
           java-version: 17
 
       - name: Build the libGDX application
-        working-directory: ${{ inputs.working-directory }}
+        working-directory: src
         run: ./gradlew ios:createIPA
   
       - name: Publish the App on TestFlight
