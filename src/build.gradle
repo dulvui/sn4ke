@@ -10,7 +10,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.2.2'
-        classpath 'com.mobidevelop.robovm:robovm-gradle-plugin:2.3.19'
+        classpath 'com.mobidevelop.robovm:robovm-gradle-plugin:2.3.17'
     }
 }
 
@@ -21,7 +21,7 @@ allprojects {
     ext {
         appName = "Sn4ke"
         gdxVersion = '1.12.0'
-        roboVMVersion = '2.3.19'
+        roboVMVersion = '2.3.17'
     }
 
     repositories {
