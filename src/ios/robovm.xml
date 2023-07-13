@@ -36,7 +36,6 @@
       <lib>z</lib>   
   </libs>
   <frameworks>
-    <framework>Gdx</framework>
     <framework>UIKit</framework>
     <framework>QuartzCore</framework>
     <framework>OpenGLES</framework>
