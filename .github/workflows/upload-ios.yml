@@ -5,8 +5,8 @@ on:
     branches:    
       - 'prod'
     paths:
-      - "src/ios/**"
-      - ".github/workflows/upload-ios.yml"
+      - 'src/ios/**'
+      - '.github/workflows/upload-ios.yml'
 
 env:
   WORKING_DIRECTORY: src
