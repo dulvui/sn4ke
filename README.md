@@ -1,5 +1,5 @@
 # MOVED TO CODEBERG
-The main repository is on now [Codeberg](https://codeberg.org/dulvui/99managers-futsal-edition).  
+The main repository is on now [Codeberg](https://codeberg.org/dulvui/sn4ke).  
 FOSS should be hosted by FOSS.
 
 ----
