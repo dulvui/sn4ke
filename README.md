@@ -1,6 +1,10 @@
+# MOVED TO CODEBERG
+The main repository is on now [Codeberg](https://codeberg.org/dulvui/99managers-futsal-edition).  
+FOSS should be hosted by FOSS.
+
+----
+
 # Sn4ke
-[![iOS upload](https://github.com/dulvui/sn4ke/actions/workflows/upload-ios.yml/badge.svg)](https://github.com/dulvui/sn4ke/actions/workflows/upload-ios.yml)
-[![Android upload](https://github.com/dulvui/sn4ke/actions/workflows/upload-android.yml/badge.svg)](https://github.com/dulvui/sn4ke/actions/workflows/upload-android.yml)
 
 Snake game made with libGDX with 60 levels.  
 This game is open source, with no ads and no tracking.
